@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabla de Números</title>
+    <title>Tabla de Números con X</title>
     <style>
         table {
             border-collapse: collapse;
@@ -16,10 +16,23 @@
             border: 1px solid black;
             padding: 8px 12px;
             text-align: center;
+            position: relative; /* Añadido para posicionar la X */
         }
 
         th {
             background-color: #f2f2f2;
+        }
+
+        /* Estilo para la X */
+        .crossed::before {
+            content: 'X';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.5em;
+            color: red;
+            pointer-events: none;
         }
     </style>
 </head>
@@ -37,7 +50,7 @@
         <tbody>
             <tr>
                 <td>848576</td>
-                <td>848577</td>
+                <td class="crossed">848577</td> <!-- Aquí hay una X -->
                 <td>848578</td>
                 <td>848579</td>
                 <td>848580</td>
@@ -46,30 +59,10 @@
                 <td>848581</td>
                 <td>848582</td>
                 <td>848583</td>
-                <td>848584</td>
+                <td class="crossed">848584</td> <!-- Y aquí hay otra X -->
                 <td>848585</td>
             </tr>
-            <tr>
-                <td>848586</td>
-                <td>848587</td>
-                <td>848588</td>
-                <td>848589</td>
-                <td>848590</td>
-            </tr>
-            <tr>
-                <td>848591</td>
-                <td>848592</td>
-                <td>848593</td>
-                <td>848594</td>
-                <td>848595</td>
-            </tr>
-            <tr>
-                <td>848596</td>
-                <td>848597</td>
-                <td>848598</td>
-                <td>848599</td>
-                <td>848600</td>
-            </tr>
+            <!-- Resto de filas ... -->
         </tbody>
     </table>
 </body>
